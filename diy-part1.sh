@@ -24,6 +24,6 @@ cd lean
 rm -rf luci-theme-neobird
 rm -rf luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
-git clone -b 18.06 https://github.com/thinktip/luci-theme-neobird.git
+git clone https://github.com/thinktip/luci-theme-neobird.git
 git clone https://github.com/chenlunTian/luci-app-openclash.git
 
