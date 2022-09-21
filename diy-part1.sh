@@ -19,12 +19,15 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 
 # add the diy 
 cd package
+rm -rf OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git
 cd lean
-rm -rf luci-theme-neobird
+rm -rf luci-theme-infinityfreedom
 rm -rf luci-theme-argon
-git clone -b 18.06 https://github.com/chenlunTian/luci-theme-argon.git
-git clone https://github.com/chenlunTian/luci-theme-neobird.git
+rm -rf luci-app-openclash
+rm -rf luci-app-fileassistant
+git clone https://github.com/jerrykuku/luci-theme-argon.git  
+git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
 git clone https://github.com/chenlunTian/luci-app-openclash.git
 git clone https://github.com/chenlunTian/luci-app-fileassistant.git
 
