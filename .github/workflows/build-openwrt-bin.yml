@@ -69,10 +69,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
-      run: |
-        cd openwrt && ./scripts/feeds install -a
-        ./scripts/feeds install -a
-        ./scripts/feeds install -a
+      run: cd openwrt && ./scripts/feeds install -a
         
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
@@ -97,8 +94,6 @@ jobs:
       run: |
         cd openwrt
         make defconfig
-        make download -j8
-        make download -j8
         make download -j8
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
