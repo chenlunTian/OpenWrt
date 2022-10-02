@@ -2,10 +2,10 @@
  [中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 # R619AC
-
+竞斗云固件
 
 # MI-R4A
-
+小米R4A千兆版
 
 # 致谢
 感谢[coolsnowwolf](https://github.com/coolsnowwolf/lede)的仓库
