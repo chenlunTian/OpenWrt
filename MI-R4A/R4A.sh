@@ -52,18 +52,19 @@ rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-theme-bootstrap
 rm -rf package/lean/luci-theme-material
 rm -rf package/lean/luci-theme-netgear
-rm -rf package/lean/luci-theme-ifit
+rm -rf package/kenzo/luci-theme-ifit
 rm -rf package/lean/luci-app-openclash
 rm -rf package/lean/luci-app-fileassistant
+rm -rf package/kenzo/luci-lib-ipkg
 
 #下载主题luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 #git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git package/lean/luci-theme-infinityfreedom
 git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
-git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
+git clone https://github.com/YL2209/luci-theme-ifit.git package/kenzo/luci-theme-ifit
 git clone https://github.com/chenlunTian/luci-app-openclash.git package/lean/luci-app-openclash
 git clone https://github.com/chenlunTian/luci-app-fileassistant.git package/lean/luci-app-fileassistant
-
+git clone https://github.com/xiangfeidexiaohuo/op-ipkg.git package/kenzo/luci-lib-ipkg
 
 git clone https://github.com/tty228/luci-app-serverchan.git package/lean/luci-app-serverchan
 
