@@ -18,8 +18,6 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # add the diy 
-rm -rf dl
-git clone https://github.com/chenlunTian/dl.git
 cd package
 rm -rf OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git
