@@ -52,7 +52,7 @@ rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-theme-bootstrap
 rm -rf package/lean/luci-theme-material
 rm -rf package/lean/luci-theme-netgear
-rm -rf package/kenzo/luci-theme-ifit
+rm -rf package/lean/luci-theme-ifit
 rm -rf package/lean/luci-app-openclash
 rm -rf package/lean/luci-app-fileassistant
 
