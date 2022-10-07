@@ -5,7 +5,7 @@
 竞斗云固件
 
 # MI-R4A
-小米R4A千兆版
+小米R4A千兆版Breed直刷版本
 
 # 致谢
 感谢[coolsnowwolf](https://github.com/coolsnowwolf/lede)的仓库
