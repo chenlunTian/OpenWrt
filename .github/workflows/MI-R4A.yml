@@ -18,7 +18,10 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-
+#每个月中，每隔10天6:30执行一次（即每月的1、11、21、31日是的6：30执行一次。）
+  schedule:
+    - cron: 30 6 */10 * *
+    
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
