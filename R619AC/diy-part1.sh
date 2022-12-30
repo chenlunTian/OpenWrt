@@ -17,18 +17,4 @@
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-# add the diy 
-cd package
-rm -rf OpenAppFilter
-git clone https://github.com/destan19/OpenAppFilter.git
-git clone https://github.com/xiaozhuai/luci-app-filebrowser
-cd lean
-rm -rf luci-theme-infinityfreedom
-rm -rf luci-theme-argon
-rm -rf luci-app-openclash
-rm -rf luci-app-fileassistant
-git clone https://github.com/jerrykuku/luci-theme-argon.git  
-git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
-git clone https://github.com/chenlunTian/luci-app-openclash.git
-git clone https://github.com/chenlunTian/luci-app-fileassistant.git
 
