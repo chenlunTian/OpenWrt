@@ -21,6 +21,7 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 cd package
 rm -rf OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git
+git clone https://github.com/xiaozhuai/luci-app-filebrowser
 cd lean
 rm -rf luci-theme-infinityfreedom
 rm -rf luci-theme-argon
