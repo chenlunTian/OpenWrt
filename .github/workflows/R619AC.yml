@@ -21,6 +21,7 @@ on:
 #每个月中，每隔10天6:30执行一次（即每月的1、11、21、31日是的6：30执行一次。）
   schedule:
     - cron: 30 6 */10 * *
+
 env:
   REPO_URL: https://github.com/zhb7670/lede
   REPO_BRANCH: master
@@ -71,12 +72,15 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
+      run: |
+        cd openwrt && ./scripts/feeds install -a
+        ./scripts/feeds install -a
+        ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
