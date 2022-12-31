@@ -22,7 +22,7 @@ on:
   schedule:
     - cron: 30 6 */10 * *
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/zhb7670/lede
   REPO_BRANCH: master
   FEEDS_CONF: R619AC/R619AC.conf.default
   CONFIG_FILE: R619AC/R619AC.config
@@ -73,7 +73,10 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: | 
+        cd openwrt && ./scripts/feeds update -a
+        ./scripts/feeds update -a
+        ./scripts/feeds update -a
 
     - name: Install feeds
       run: |
