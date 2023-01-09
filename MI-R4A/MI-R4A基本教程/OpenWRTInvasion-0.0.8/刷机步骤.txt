@@ -1,0 +1,33 @@
+第一步：
+python remote_command_execution_vulnerability.py
+第二步:
+输入192.168.31.1
+第三步：
+输入路由器密码
+第四步：
+默认选1
+第五步：
+telnet 192.168.31.1
+第六步：
+输入 root  密码  root
+第七步
+输入cat /proc/mtd可查看分区情况
+输入dd if=/dev/mtd0 of=/tmp/all.bin将整个磁盘分区命名为 all.bin 备份到 /tmp 路径下。
+输入dd if=/dev/mtd1 of=/tmp/bootloader.bin将 Bootloader 分区命名为 bootloader.bin 备份到 /tmp 路径下。
+第八步
+winSCP  新建ftp  192.168.31.1   root  root  将tmp下的all.bin和bootloader.bin拷贝保存
+第九步
+将breed-mt7621-pbr-m1.bin拷贝到 tmp文件夹下
+第十步
+输入 mtd write /tmp/breed-mt7621-pbr-m1.bin Bootloader刷入 Breed 。
+第十一步
+断电 按住复位键的同时插电，看到电源灯与网络灯闪烁几下后即可松开复位键，此时就进入了 Breed 模式。
+在浏览器的地址栏输入 192.168.1.1 即可进入 Breed 界面。（注意：由于运营商光猫管理界面一般为192.168.1.1 ，故须拔去 WAN 口网线，否则会访问到光猫管理界面。）
+第十二步
+点击固件备份  
+将eeprom(eeprom.bin)和编程器固件(full.bin)备份
+第十三步
+将mac地址修改界面截图备份
+第十四步
+点击固件更新
+将要刷入的固件和eeprom.bin刷入即可
