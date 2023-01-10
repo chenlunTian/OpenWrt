@@ -52,7 +52,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon_armygreen/g' feeds/luci/collecti
 # 设置root密码为Tian1234567
 # 命令行生成密码字符串：perl -e 'print crypt("admin",q($1$wEehtjxj)),"\n"'
 # admin为密码明文   q($加密方式$加密盐‘就是一长串字符’)
-sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$V4UetPzk$PoVwEyjbCkwZKNVmA6h5Z0/g' ./package/lean/default-settings/files/zzz-default-settings
+sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$V4UetPzk$.rFSRjK6PwDBOOQ6vpXIw./g' ./package/lean/default-settings/files/zzz-default-settings
 
 # 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
 #sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-turboacc/po/zh-cn/turboacc.po
