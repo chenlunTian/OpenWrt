@@ -13,7 +13,7 @@
 |固件名称|最新编译状态|
 |----|----|
 |![](https://img.shields.io/badge/LEDE-MI_R4A固件-FFFFFF.svg)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-R4A/badge.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-R4A.yml)|
-|![](https://img.shields.io/badge/LEDE-MI_R4A_V2-FFFFFF.svg)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI_R4A_V2/badge.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-R4A_V2.yml)|
+|![](https://img.shields.io/badge/LEDE-MI_R4A_V2固件-FFFFFF.svg)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-R4A_V2/badge.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-R4A_V2.yml)|
 
 ## MI-AC2100
 |固件名称|最新编译状态|
