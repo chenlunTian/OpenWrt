@@ -21,7 +21,10 @@
 |![](https://img.shields.io/badge/LEDE-MI_AC2100固件-FFFFFF.svg)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-AC2100.yml)|
 
 ## OpenWrt
-J1900软路由固件
+
+|固件名称|最新编译状态|
+|----|----|
+|![](https://img.shields.io/badge/LEDE-J1900软路由固件-FFFFFF.svg)|[![](https://github.com/chenlunTian/OpenWrt/workflows/OpenWrt/badge.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/OpenWrt.yml)|
 
 # 致谢
 感谢[coolsnowwolf](https://github.com/coolsnowwolf/lede)的仓库
