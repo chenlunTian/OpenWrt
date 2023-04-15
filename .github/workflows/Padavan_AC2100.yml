@@ -16,8 +16,8 @@ env:
   REPO_BRANCH: main
   UPLOAD_RELEASE: true
   TNAME: R2100
-  CONFIG_FILE: Padavan_R2100.config
-  DIY_SH: Padavan_R2100.sh
+  CONFIG_FILE: MI-AC2100/Padavan_R2100.config
+  DIY_SH: MI-AC2100/Padavan_R2100.sh
 
 jobs:
   build:
