@@ -22,6 +22,7 @@
 |固件名称|最新编译状态|
 |----|----|
 |[![](https://img.shields.io/badge/LEDE-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/MI-AC2100.yml)|
+|[![](https://img.shields.io/badge/PADAVAN-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/Padavan-AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/Padavan-AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/Padavan-AC2100.yml)|
 
 ## OpenWrt
 
