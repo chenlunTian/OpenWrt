@@ -22,7 +22,12 @@
 |固件名称|最新编译状态|
 |----|----|
 |[![](https://img.shields.io/badge/LEDE-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/MI-AC2100.yml)|
-|[![](https://img.shields.io/badge/PADAVAN-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/Padavan-AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/Padavan-AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/Padavan-AC2100.yml)|
+|[![](https://img.shields.io/badge/PADAVAN-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/Padavan_AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/Padavan_AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/Padavan_AC2100.yml)|
+
+- Padavan源码是[MeIsReallyBa/padavan-4.4](https://github.com/MeIsReallyBa/padavan-4.4)。
+- Github Actions参考自[P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)&[hanwckf/scut_padavan_build](https://github.com/hanwckf/scut_padavan_build)。
+- 编译目标为xiaomi-AC2100
+- 默认登陆地址[192.168.1.1](http://192.168.1.1),登录名admin/admin
 
 ## OpenWrt
 
