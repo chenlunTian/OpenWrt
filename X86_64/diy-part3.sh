@@ -9,5 +9,5 @@
 # File name: diy-part3.sh
 # Description: OpenWrt DIY script part 3 (Before Update feeds)
 #
-mv OpenWrt/favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico
-mv OpenWrt/banner openwrt/package/base-files/files/etc/banner
+mv X86_64/favicon.ico openwrt/package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/favicon.ico
+mv X86_64/banner openwrt/package/base-files/files/etc/banner

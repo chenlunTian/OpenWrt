@@ -21,11 +21,11 @@
 |[![](https://img.shields.io/badge/LEDE-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/MI-AC2100.yml)|192.168.1.1|root/Tian1234567|
 |[![](https://img.shields.io/badge/PADAVAN-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/Padavan_AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/Padavan_AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/Padavan_AC2100.yml)|192.168.1.1|admin/admin|
 
-## OpenWrt
+## OpenWrt X86_64
 
 |固件名称|最新编译状态|默认登陆地址|登录名/密码|
 |----|----|----|----|
-|[![](https://img.shields.io/badge/LEDE-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/OpenWrt.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/OpenWrt/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/OpenWrt.yml)|192.168.1.1|root/Tian1234567|
+|[![](https://img.shields.io/badge/LEDE-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/X86_64.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/X86_64/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/X86_64.yml)|192.168.1.1|root/Tian1234567|
 
 # 致谢
 - 感谢[coolsnowwolf](https://github.com/coolsnowwolf/lede)的openwrt仓库。
