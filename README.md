@@ -26,8 +26,8 @@
 
 - Padavan源码是[MeIsReallyBa/padavan-4.4](https://github.com/MeIsReallyBa/padavan-4.4)。
 - Github Actions参考自[P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)&[hanwckf/scut_padavan_build](https://github.com/hanwckf/scut_padavan_build)。
-- 编译目标为xiaomi-AC2100
-- 默认登陆地址[192.168.1.1](http://192.168.1.1),登录名admin/admin
+- 编译目标为xiaomi-AC2100。
+- 默认登陆地址[192.168.1.1](http://192.168.1.1),登录名admin/admin。
 
 ## OpenWrt
 
@@ -36,6 +36,7 @@
 |[![](https://img.shields.io/badge/LEDE-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/OpenWrt.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/OpenWrt/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/OpenWrt.yml)|
 
 # 致谢
-感谢[coolsnowwolf](https://github.com/coolsnowwolf/lede)的仓库
-感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的云编译项目
-感谢[pidge](https://www.right.com.cn/FORUM/space-uid-221258.html) 发布的 [分享小米R4A千兆版编译OPENWRT(Breed直刷版)](https://www.right.com.cn/FORUM/thread-4052254-1-1.html) 的文章
+- 感谢[coolsnowwolf](https://github.com/coolsnowwolf/lede)的仓库。
+- 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的云编译项目。
+- 感谢[pidge](https://www.right.com.cn/FORUM/space-uid-221258.html) 发布的 [分享小米R4A千兆版编译OPENWRT(Breed直刷版)](https://www.right.com.cn/FORUM/thread-4052254-1-1.html) 的文章。
+- 感谢[MeIsReallyBa/padavan-4.4](https://github.com/MeIsReallyBa/padavan-4.4)的仓库。
