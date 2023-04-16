@@ -163,7 +163,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: steps.tag.outputs.status == 'success' && !cancelled()
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
         with:
           name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           tag_name: ${{ steps.tag.outputs.release_tag }}
@@ -171,8 +171,10 @@ jobs:
           files: ${{ env.FIRMWARE }}/*
 
       - name: Delete workflow runs
-        uses: GitRML/delete-workflow-runs@main
+        uses: ActionsRML/delete-workflow-runs@main
         with:
+          token: ${{ secrets.ACTIONS_PAT }}
+          repository: ${{ github.repository }}
           retain_days: 1
           keep_minimum_runs: 3
 
@@ -183,6 +185,6 @@ jobs:
           keep_latest: 6
           delete_tags: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_PAT }}
 
 

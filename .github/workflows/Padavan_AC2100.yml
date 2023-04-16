@@ -4,9 +4,6 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
-  schedule:  #每个月中，每隔10天6:30执行一次（即每月的1、11、21、31日是的6：30执行一次。）
-    - cron: 30 6 */10 * *
-
 #修复上传到RELEASE的错误
 permissions:
   contents: write
@@ -99,9 +96,9 @@ jobs:
         /opt/rt-n56u/trunk/configs/templates/${{ env.TNAME }}.config
 
     - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: ActionsRML/delete-workflow-runs@main
       with:
-       token: ${{ github.token }}
+       token: ${{ secrets.ACTIONS_PAT }}
        repository: ${{ github.repository }}
        retain_days: 1
        keep_minimum_runs: 3
