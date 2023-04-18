@@ -11,6 +11,7 @@
 #
 # 添加插件源码
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld.git' feeds.conf.default
-sed -i '$a src-git openwrt_packages https://github.com/shidahuilang/openwrt-package.git' feeds.conf.default
-sed -i '$a src-git openwrt_passwall https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
-
+sed -i '$a src-git small8 https://github.com/kenzok8/small-package' feeds.conf.default
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
