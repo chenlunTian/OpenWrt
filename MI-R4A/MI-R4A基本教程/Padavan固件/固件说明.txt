@@ -11,3 +11,8 @@ Padavan固件
 用户名和密码：admin/admin
 无线wifi名称：PDCN
 无线wifi密码：1234567890
+
+MI-R4A_4.4.198.9-100.trx
+Padavan固件
+管理ip：192.168.2.1
+用户名和密码：admin/admin
