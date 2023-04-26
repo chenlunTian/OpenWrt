@@ -25,7 +25,7 @@ env:
   DIY_P3_SH: X86_64/diy-part3.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
-  UPLOAD_DL_DIR: false
+  UPLOAD_DL_DIR: true
   UPLOAD_PACKAGE_DIR: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
