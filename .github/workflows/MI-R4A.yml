@@ -8,8 +8,8 @@ name: MI-R4A
 on:
   repository_dispatch:
   workflow_dispatch: 
-  schedule:  #每个月中，每隔10天6:30执行一次（即每月的1、11、21、31日是的6：30执行一次。）
-    - cron: 30 6 */10 * *
+#  schedule:  #每个月中，每隔10天6:30执行一次（即每月的1、11、21、31日是的6：30执行一次。）
+#    - cron: 30 6 */10 * *
 
 #修复上传到RELEASE的错误
 permissions:
