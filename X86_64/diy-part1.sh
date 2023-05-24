@@ -19,3 +19,6 @@ sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds
 sed -i '$a src-git istore https://github.com/linkease/istore;main' feeds.conf.default
 # compat for 21.02
 sed -i '$a src-git compat https://github.com/jjm2473/openwrt-compat.git;21.02' feeds.conf.default
+
+# 添加netspeedtest
+git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
