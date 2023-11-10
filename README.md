@@ -1,23 +1,6 @@
 
 # 云编译项目
 
-## R619AC
-竞斗云固件编译
-
-|固件名称|最新编译状态|默认登陆地址|登录名/密码|
-|----|----|----|----|
-|[![](https://img.shields.io/badge/LEDE-竞斗云固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/R619AC.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/R619AC/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/R619AC.yml)|192.168.1.1|root/Tian1234567|
-
-## MI-R4A
-小米R4A千兆版Breed直刷版本
-
-[刷机教程](./MI-R4A/MI-R4A%E5%9F%BA%E6%9C%AC%E6%95%99%E7%A8%8B/MIR4.md)
-
-|固件名称|最新编译状态|默认登陆地址|登录名/密码|
-|----|----|----|----|
-|[![](https://img.shields.io/badge/LEDE-MI_R4A固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-R4A.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-R4A/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/MI-R4A.yml)|192.168.1.1|root/Tian1234567|
-|[![](https://img.shields.io/badge/LEDE-MI_R4A_V2固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-R4A_V2.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-R4A_V2/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/MI-R4A_V2.yml)|192.168.1.1|root/Tian1234567|
-
 ## MI-AC2100
 小米AC2100 R2100固件编译
 
@@ -29,9 +12,9 @@
 ## OpenWrt X86_64
 软路由固件编译
 
-|固件名称|最新编译状态|默认登陆地址|登录名/密码|
-|----|----|----|----|
-|[![](https://img.shields.io/badge/LEDE-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/X86_64.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/X86_64/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/X86_64.yml)|192.168.1.1|root/Tian1234567|
+|固件名称|最新编译状态|固件下载|默认登陆地址|登录名/密码|
+|----|----|----|----|----|
+|[![](https://img.shields.io/badge/LEDE-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/X86_64.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/X86_64/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/X86_64.yml)|[![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/chenlunTian/OpenWrt/releases/tag/X86_64) |192.168.1.1|root/Tian1234567|
 
 # 云编译自定义固件配置教程
 
@@ -48,3 +31,4 @@
 - 感谢[xiaorouji](https://github.com/xiaorouji/openwrt-passwall)提供的**openwrt-passwall**插件源码仓库。
 - 感谢[kenzok8](https://github.com/kenzok8)提供的**openwrt-packages**和**small**插件源码仓库。
 - 感谢[linkease(易有云团队)](https://github.com/linkease/istore)提供的**iStore**插件源码仓库。
+- 感谢[haiibo](https://github.com/haiibo/OpenWrt)的openwrt仓库。
