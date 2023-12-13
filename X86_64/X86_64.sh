@@ -89,6 +89,10 @@ svn export https://github.com/sbwml/luci-app-alist/trunk/alist package/alist
 svn export https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
 svn export https://github.com/linkease/istore/trunk/luci package/luci-app-store
 
+# mosquitto
+svn export https://github.com/openwrt/luci/trunk/applications/luci-app-mosquitto package/mosquitto/luci-app-mosquitto
+svn export https://github.com/openwrt/packages/trunk/net/mosquitto package/mosquitto/mosquitto
+
 # 在线用户
 svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
 sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
