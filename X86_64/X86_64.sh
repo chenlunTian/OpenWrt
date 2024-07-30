@@ -1,11 +1,9 @@
-#!/bin/bash
-#
 echo "Auto Run:"
 # 修改openwrt登陆地址,把下面的192.168.31.1修改成你想要的就可以了
 # sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把YOU-R4A修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='PandoraBox'' package/lean/default-settings/files/zzz-default-settings
+sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWRT'' package/lean/default-settings/files/zzz-default-settings
 
 # x86 型号只显示 CPU 型号
 sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
@@ -35,6 +33,49 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-serverchan
 echo "add packages"
+
+git clone https://github.com/Lienol/openwrt-package.git
+mv openwrt-package/luci-app-filebrowser ./package/luci-app-filebrowser
+mv openwrt-package/luci-app-ssr-mudb-server ./package/luci-app-ssr-mudb-server
+
+git clone -b openwrt-18.06 https://github.com/immortalwrt/luci.git luci1
+mv luci1/applications/luci-app-eqos ./package/luci-app-eqos
+
+git clone https://github.com/xiaorouji/openwrt-passwall.git
+mv openwrt-passwall/luci-app-passwall ./package/luci-app-passwall
+
+git clone https://github.com/xiaorouji/openwrt-passwall2.git
+mv openwrt-passwall2/luci-app-passwall2 ./package/luci-app-passwall2
+
+mkdir openclash
+cd openclash
+git init
+git remote add -f origin https://github.com/vernesong/OpenClash.git
+git config core.sparsecheckout true
+echo "luci-app-openclash" >> .git/info/sparse-checkout
+git pull --depth 1 origin master
+git branch --set-upstream-to=origin/master master
+mv luci-app-openclash ./package/luci-app-openclash
+cd ..
+
+git clone https://github.com/haiibo/packages.git packages2
+mv packages2/luci-theme-atmaterial ./package/luci-theme-atmaterial
+mv packages2/luci-theme-netgear ./package/luci-theme-netgear
+mv packages2/luci-theme-opentomcat ./package/luci-theme-opentomcat
+mv packages2/luci-app-onliner ./package/luci-app-onliner
+
+git clone https://github.com/sbwml/luci-app-mosdns.git
+mv luci-app-mosdns/luci-app-mosdns ./package/luci-app-mosdns
+mv luci-app-mosdns/mosdns ./package/mosdns
+
+git clone https://github.com/linkease/nas-packages-luci.git
+mv nas-packages-luci/luci/luci-app-ddnsto ./package/luci-app-ddnsto
+
+git clone https://github.com/linkease/nas-packages.git
+mv nas-packages/network/services/ddnsto package/ddnsto
+
+rm -rf nas-packages nas-packages-luci packages2 openclash openwrt-passwall2 openwrt-passwall openwrt-package luci1 luci-app-mosdns
+
 # 添加额外插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
@@ -42,19 +83,14 @@ git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
-svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
-svn export https://github.com/Lienol/openwrt-package/trunk/luci-app-ssr-mudb-server package/luci-app-ssr-mudb-server
-svn export https://github.com/immortalwrt/luci/branches/openwrt-18.06/applications/luci-app-eqos package/luci-app-eqos
-# svn export https://github.com/syb999/openwrt-19.07.1/trunk/package/network/services/msd_lite package/msd_lite
+
 
 # 科学上网插件
 git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
 svn export https://github.com/haiibo/packages/trunk/luci-app-vssr package/luci-app-vssr
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
-svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+
 
 # Themes
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
@@ -62,9 +98,7 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon packa
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 git clone --depth=1 https://github.com/chenlunTian/luci-theme-argon_armygreen package/luci-theme-argon_armygreen
-svn export https://github.com/haiibo/packages/trunk/luci-theme-atmaterial package/luci-theme-atmaterial
-svn export https://github.com/haiibo/packages/trunk/luci-theme-opentomcat package/luci-theme-opentomcat
-svn export https://github.com/haiibo/packages/trunk/luci-theme-netgear package/luci-theme-netgear
+
 # SmartDNS
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
@@ -73,28 +107,6 @@ git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 
-# MosDNS
-svn export https://github.com/sbwml/luci-app-mosdns/trunk/luci-app-mosdns package/luci-app-mosdns
-svn export https://github.com/sbwml/luci-app-mosdns/trunk/mosdns package/mosdns
-
-# DDNS.to
-svn export https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto package/luci-app-ddnsto
-svn export https://github.com/linkease/nas-packages/trunk/network/services/ddnsto package/ddnsto
-
-# Alist
-svn export https://github.com/sbwml/luci-app-alist/trunk/luci-app-alist package/luci-app-alist
-svn export https://github.com/sbwml/luci-app-alist/trunk/alist package/alist
-
-# iStore
-svn export https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
-svn export https://github.com/linkease/istore/trunk/luci package/luci-app-store
-
-# mosquitto
-svn export https://github.com/openwrt/luci/trunk/applications/luci-app-mosquitto package/mosquitto/luci-app-mosquitto
-svn export https://github.com/openwrt/packages/trunk/net/mosquitto package/mosquitto/mosquitto
-
-# 在线用户
-svn export https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
 sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
 sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
 chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
