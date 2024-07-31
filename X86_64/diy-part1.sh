@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 
+rm -rf ./target/linux/x86/Makefile
 #切换成5.15内核
 git checkout 8cf859bf012c9619d56cf90e567a381edd1119d8
 # 修改Makefile
