@@ -20,6 +20,9 @@ sed -i '12s/ucidef_set_interface_wan/ucidef_set_interface_lan/g' package/base-fi
 echo "remove packages"
 # 替换的包 
 
+# luci-app-lucky
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+
 # luci-app-serverchan
 rm -rf feeds/luci/applications/luci-app-serverchan
 git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
