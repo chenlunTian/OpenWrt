@@ -1,14 +1,6 @@
 
 # 云编译项目
 
-## MI-AC2100
-小米AC2100 R2100固件编译
-
-|固件名称|最新编译状态|默认登陆地址|登录名/密码|
-|----|----|----|----|
-|[![](https://img.shields.io/badge/LEDE-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/MI-AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/MI-AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/MI-AC2100.yml)|192.168.1.1|root/Tian1234567|
-|[![](https://img.shields.io/badge/PADAVAN-MI_AC2100固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/Padavan_AC2100.yml)|[![](https://github.com/chenlunTian/OpenWrt/workflows/Padavan_AC2100/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/Padavan_AC2100.yml)|192.168.1.1|admin/admin|
-
 ## OpenWrt X86_64
 软路由固件编译
 
@@ -28,6 +20,8 @@
 > - [x] [netspeedtest](https://github.com/sirpdboy/netspeedtest.git)
 > - [x] [luci-app-advancedplus](https://github.com/sirpdboy/luci-app-advancedplus.git)
 > - [x] [luci-app-openclash](https://github.com/chenlunTian/luci-app-openclash.git)
+> - [x] docker
+> - [ ] vsftpd
 > - [ ] luci-app-samba
 
 # 致谢
