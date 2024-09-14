@@ -19,6 +19,17 @@ sed -i '12s/ucidef_set_interface_wan/ucidef_set_interface_lan/g' package/base-fi
 
 echo "remove packages"
 # 替换的包 
+# luci-theme-neobird
+rm -rf package/lean/luci-theme-neobird
+git clone https://github.com/thinktip/luci-theme-neobird.git package/lean/luci-theme-neobird
+
+# luci-theme-argon
+rm -rf package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+
+# luci-theme-edge
+rm -rf package/lean/luci-theme-edge
+git clone -b 18.06 https://github.com/kiddin9/luci-theme-edge.git package/lean/luci-theme-edge
 
 # luci-app-lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
