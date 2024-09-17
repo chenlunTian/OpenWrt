@@ -28,6 +28,44 @@ sed -i 's/root:::0:99999:7:::/root:$1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/:0:99999:7:
 echo "remove packages"
 # 替换的包 
 
+# diskman
+mkdir -p package/luci-app-diskman && \
+wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/applications/luci-app-diskman/Makefile -O package/luci-app-diskman/Makefile
+mkdir -p package/parted && \
+wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
+
+
+git clone https://github.com/danchexiaoyang/luci-app-onliner.git package/luci-app-onliner
+
+git clone https://github.com/linkease/istore package/istore
+#
+git clone https://github.com/erdoukki/luci-app-arpbind.git package/luci-app-arpbind
+
+#luci-app-vlmcsd
+git clone https://github.com/zlg98/luci-app-vlmcsd package/luci-app-vlmcsd
+git clone https://github.com/cokebar/openwrt-vlmcsd.git package/openwrt-vlmcsd
+
+#ramfree
+git clone https://github.com/QC3284/luci-app-ramfree.git package/luci-app-ramfree
+
+# unblockmusic
+git clone https://github.com/maxlicheng/luci-app-unblockmusic.git package/luci-app-unblockmusic
+
+# ddns-go
+git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
+
+# luci-theme-argon
+git clone  https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+
+# openclash
+git clone https://github.com/chenlunTian/luci-app-openclash.git package/luci-app-openclash
+
+# luci-app-serverchan
+git clone  https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
+
+#lucky
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+
 # luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-netdata
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
@@ -50,6 +88,15 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 rm -rf feeds/packages/utils/watchcat
 git clone https://github.com/chenlunTian/watchcat.git feeds/packages/utils/watchcat
 git clone https://github.com/MilesPoupart/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
+
+# mosdns
+rm -rf feeds/packages/net/v2ray-geodata
+
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+
+# luci-app-adguardhome
+git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
 echo "run scripts update && install"
 
