@@ -17,7 +17,7 @@ permissions:
 
 env: 
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: v23.05.4 --single-branch --depth=1
+  REPO_BRANCH: v23.05.0 --single-branch --depth=1
   CONFIG_FILE: opwrt/X86_64.config
   DIY_P1_SH: opwrt/diy-part1.sh
   DIY_P2_SH: opwrt/X86_64.sh
