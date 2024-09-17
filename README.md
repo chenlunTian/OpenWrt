@@ -22,6 +22,7 @@
 > - [x] [netspeedtest](https://github.com/sirpdboy/netspeedtest.git)
 > - [x] [luci-app-advancedplus](https://github.com/sirpdboy/luci-app-advancedplus.git)
 > - [x] [luci-app-openclash](https://github.com/chenlunTian/luci-app-openclash.git)
+> - [x] [turboacc](https://github.com/chenmozhijin/turboacc)
 > - [x] docker
 > - [ ] vsftpd
 > - [ ] luci-app-samba

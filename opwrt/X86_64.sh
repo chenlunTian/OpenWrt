@@ -4,69 +4,38 @@ echo "Auto Run:"
 # 修改openwrt登陆地址,把下面的192.168.31.1修改成你想要的就可以了
 # sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
-# 修改主机名字，把YOU-R4A修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWRT'' package/lean/default-settings/files/zzz-default-settings
+# 修改ntp服务器地址
+sed -i '323s/0/1/g' package/base-files/files/bin/config_generate
+sed -i '324s/0.openwrt.pool.ntp.org/ntp1.aliyun.com/g' package/base-files/files/bin/config_generate
+sed -i '325s/1.openwrt.pool.ntp.org/ntp.tencent.com/g' package/base-files/files/bin/config_generate
+sed -i '326s/2.openwrt.pool.ntp.org/ntp.ntsc.ac.cn/g' package/base-files/files/bin/config_generate
+sed -i '327s/3.openwrt.pool.ntp.org/time.ustc.edu.cn/g' package/base-files/files/bin/config_generate
 
-# x86 型号只显示 CPU 型号
-sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
+# 修改时区为 CST-8 此项要是再ntp服务器之前则ntp对应行数加1
+sed -i '315s/UTC/CST-8/g' package/base-files/files/bin/config_generate
+sed -i "315a\		set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
-# 修改本地时间格式
-sed -i 's/os.date()/os.date("%a %Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm
-
-# 修改默认wan口为eth0
+# 修改默认wan口为eth0,并增加eth2为lan口
 sed -i '11s/ucidef_set_interface_lan/ucidef_set_interface_wan/g' package/base-files/files/etc/board.d/99-default_network
 sed -i '12s/ucidef_set_interface_wan/ucidef_set_interface_lan/g' package/base-files/files/etc/board.d/99-default_network
+sed -i "12a\[ -d /sys/class/net/eth2 ] && ucidef_set_interface_lan 'eth2'" package/base-files/files/etc/board.d/99-default_network
+
+# 设置root密码为Tian1234567
+# 命令行生成密码字符串：perl -e 'print crypt("admin",q($1$wEehtjxj)),"\n"'
+# admin为密码明文   q($加密方式$加密盐‘就是一长串字符’) $1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/
+sed -i 's/root:::0:99999:7:::/root:$1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 echo "remove packages"
 # 替换的包 
-# luci-theme-neobird
-rm -rf package/lean/luci-theme-neobird
-git clone https://github.com/thinktip/luci-theme-neobird.git package/lean/luci-theme-neobird
-
-# luci-theme-argon
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-
-# luci-theme-edge
-rm -rf package/lean/luci-theme-edge
-git clone -b 18.06 https://github.com/kiddin9/luci-theme-edge.git package/lean/luci-theme-edge
-
-# luci-app-lucky
-git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
-
-# luci-app-serverchan
-rm -rf feeds/luci/applications/luci-app-serverchan
-git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
-
-# mosdns
-rm -rf feeds/packages/net/mosdns
-rm -rf feeds/luci/applications/luci-app-mosdns
-git clone https://github.com/sbwml/luci-app-mosdns.git
-mv luci-app-mosdns/luci-app-mosdns ./package/luci-app-mosdns
-mv luci-app-mosdns/mosdns ./package/mosdns
-rm -rf luci-app-mosdns
-
-# luci-app-adguardhome
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
 # luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-netdata
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 
-git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app-ikoolproxy
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-
-# msd_lite
-rm -rf feeds/packages/net/msd_lite
-git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
-git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 
 # luci-app-eqosplus
 git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
-
-# ddns-go
-git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 
 # 添加netspeedtest
 git clone --depth=1 https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
@@ -74,19 +43,13 @@ git clone --depth=1 https://github.com/sirpdboy/netspeedtest.git package/netspee
 # 添加advancedplus
 git clone https://github.com/sirpdboy/luci-app-advancedplus.git package/luci-app-advancedplus
 
+# 添加turboacc
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
-# openclash
-git clone https://github.com/chenlunTian/luci-app-openclash.git package/luci-app-openclash
-
-# 设置root密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
-#sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
-# 设置root密码为Tian1234567
-# 命令行生成密码字符串：perl -e 'print crypt("admin",q($1$wEehtjxj)),"\n"'
-# admin为密码明文   q($加密方式$加密盐‘就是一长串字符’)
-sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$V4UetPzk$.rFSRjK6PwDBOOQ6vpXIw./g' ./package/lean/default-settings/files/zzz-default-settings
-
-# 修改插件名字（修改名字后不知道会不会对插件功能有影响，自己多测试）
-#sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-turboacc/po/zh-cn/turboacc.po
+# 删除老版本watchcat
+rm -rf feeds/packages/utils/watchcat
+git clone https://github.com/chenlunTian/watchcat.git feeds/packages/utils/watchcat
+git clone https://github.com/MilesPoupart/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
 
 echo "run scripts update && install"
 
