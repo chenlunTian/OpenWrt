@@ -3,7 +3,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # OpenWRT云编译
 #
-name: X86_64
+name: lede_X86_64
 
 on:
   repository_dispatch:
@@ -18,9 +18,9 @@ permissions:
 env: 
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: X86_64/X86_64.config
-  DIY_P1_SH: X86_64/diy-part1.sh
-  DIY_P2_SH: X86_64/X86_64.sh
+  CONFIG_FILE: lede/X86_64.config
+  DIY_P1_SH: lede/diy-part1.sh
+  DIY_P2_SH: lede/X86_64.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_DL_DIR: true
@@ -161,14 +161,6 @@ jobs:
           tag_name: ${{ steps.tag.outputs.release_tag }}
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
-
-#      - name: Delete workflow runs
-#        uses: Mattraks/delete-workflow-runs@v2
-#        with:
-#          token: ${{ github.token }}
-#          repository: ${{ github.repository }}
-#          retain_days: 1
-#          keep_minimum_runs: 3
 
       - name: Remove old Releases
         uses: dev-drprasad/delete-older-releases@v0.1.0
