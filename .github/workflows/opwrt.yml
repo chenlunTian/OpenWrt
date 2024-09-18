@@ -155,11 +155,11 @@ jobs:
 
       - name: Upload Firmware To Release
         if: steps.compile.outputs.status == 'success' && env.FIRMWARE_RELEASE == 'true'
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v2
         with:
           name: R${{ env.DATE }} for ${{ env.FIRMWARE_TAG }}
           allowUpdates: true
-          tag: ${{ env.FIRMWARE_TAG }}
+          tag_name: ${{ env.FIRMWARE_TAG }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
@@ -170,6 +170,7 @@ jobs:
             - 🚀 内核版本: ${{ env.KERNEL }}
             - 🌐 默认地址: 192.168.1.1
             - 🔑 默认密码: Tian1234567
+          files: ${{ env.FIRMWARE }}/*
 
       - name: Remove old Releases
         uses: dev-drprasad/delete-older-releases@v0.1.0
