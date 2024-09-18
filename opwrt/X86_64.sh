@@ -28,12 +28,14 @@ sed -i 's/root:::0:99999:7:::/root:$1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/:0:99999:7:
 echo "remove packages"
 # 替换的包 
 
+#istore
 git clone https://github.com/linkease/istore package/istore
 
+# #OpenAppFilter
+# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 #lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
-
 
 # luci-app-eqosplus
 git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
@@ -41,10 +43,8 @@ git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplu
 # 添加turboacc
 curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
 
-
-
 # luci-app-adguardhome
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
 echo "run scripts update && install"
 
