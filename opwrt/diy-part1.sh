@@ -7,12 +7,8 @@
 # sed -i '121s/^/#/' include/kernel-defaults.mk
 # sed -i '121a\    cp $(TOPDIR)/vermagic $(LINUX_DIR)/.vermagic' include/kernel-defaults.mk
 
-sed -i '3,4s/^/#/' feeds.conf.default
-
-sed -i '1 i src-git routing https://git.openwrt.org/feed/routing.git;openwrt-23.05' feeds.conf.default
-sed -i '1 i src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-23.05' feeds.conf.default
-sed -i '1 i src-git packages1 https://github.com/immortalwrt/packages.git;openwrt-23.05' feeds.conf.default
-sed -i '1 i src-git luci1 https://github.com/immortalwrt/luci.git;openwrt-23.05' feeds.conf.default
+sed -i '1 i src-git packages1 https://github.com/immortalwrt/packages.git' feeds.conf.default
+sed -i '1 i src-git luci1 https://github.com/immortalwrt/luci.git' feeds.conf.default
 
 
 
