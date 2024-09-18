@@ -7,8 +7,8 @@
 # sed -i '121s/^/#/' include/kernel-defaults.mk
 # sed -i '121a\    cp $(TOPDIR)/vermagic $(LINUX_DIR)/.vermagic' include/kernel-defaults.mk
 
-sed -i '1 i src-git packages1 https://github.com/immortalwrt/packages.git' feeds.conf.default
-sed -i '1 i src-git luci1 https://github.com/immortalwrt/luci.git' feeds.conf.default
+sed -i '4 a src-git packages1 https://github.com/immortalwrt/packages.git' feeds.conf.default
+sed -i '4 a src-git luci1 https://github.com/immortalwrt/luci.git' feeds.conf.default
 
 
 
