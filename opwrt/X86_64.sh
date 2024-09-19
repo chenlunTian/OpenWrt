@@ -46,7 +46,7 @@ curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turbo
 # luci-app-adguardhome
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
-git clone https://github.com/immortalwrt/wwan-packages.git package/wwan-packages
+#git clone https://github.com/immortalwrt/wwan-packages.git package/wwan-packages
 
 
 echo "run scripts update && install"
