@@ -55,4 +55,9 @@ rm -rf package/kernel/fibocom-qmi-wwan
 echo "run scripts update && install"
 
 ./scripts/feeds update -a
+
+rm -rf package/kernel/quectel-qmi-wwan
+rm -rf package/kernel/fibocom-qmi-wwan
+
+
 ./scripts/feeds install -a
