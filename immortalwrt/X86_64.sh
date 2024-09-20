@@ -23,41 +23,10 @@ sed -i "12a\[ -d /sys/class/net/eth2 ] && ucidef_set_interface_lan 'eth2'" packa
 # 设置root密码为Tian1234567
 # 命令行生成密码字符串：perl -e 'print crypt("admin",q($1$wEehtjxj)),"\n"'
 # admin为密码明文   q($加密方式$加密盐‘就是一长串字符’) $1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/
-sed -i '1s/root:::0:99999:7:::/root:$1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/:0:99999:7:::/g' package/base-files/files/etc/shadow
-
-echo "remove packages"
-# 替换的包 
-
-#istore
-git clone https://github.com/linkease/istore package/istore
-
-# #OpenAppFilter
-# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-
-#lucky
-git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
-
-# luci-app-eqosplus
-git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
-
-# 添加turboacc
-curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh
-
-# luci-app-adguardhome
-git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-
-#wwan-packages
-git clone https://github.com/immortalwrt/wwan-packages.git package/awwan-packages
-
-rm -rf package/kernel/quectel-qmi-wwan
-rm -rf package/kernel/fibocom-qmi-wwan
-
-echo "run scripts update && install"
-
-./scripts/feeds update -a
-
-rm -rf package/kernel/quectel-qmi-wwan
-rm -rf package/kernel/fibocom-qmi-wwan
+sed -i 's?root:::0:99999:7:::?root:$1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/:0:99999:7:::?g' package/base-files/files/etc/shadow
 
 
-./scripts/feeds install -a
+# echo "run scripts update && install"
+
+# ./scripts/feeds update -a
+# ./scripts/feeds install -a
