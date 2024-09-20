@@ -49,10 +49,10 @@ git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adg
 #wwan-packages
 git clone https://github.com/immortalwrt/wwan-packages.git package/awwan-packages
 
-
+rm -rf package/kernel/quectel-qmi-wwan
+rm -rf package/kernel/fibocom-qmi-wwan
 
 echo "run scripts update && install"
 
 ./scripts/feeds update -a
-rm -rf package/feeds/packages/fibocom-qmi-wwan
 ./scripts/feeds install -a
