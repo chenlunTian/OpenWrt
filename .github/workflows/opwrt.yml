@@ -17,7 +17,7 @@ permissions:
 
 env: 
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: v23.05.2 --single-branch --depth=1
+  REPO_BRANCH: v23.05.2 --depth=1
   CONFIG_FILE: opwrt/X86_64.config
   DIY_P1_SH: opwrt/diy-part1.sh
   DIY_P2_SH: opwrt/X86_64.sh
@@ -97,7 +97,7 @@ jobs:
           cd openwrt
           sudo chmod 777 -R *
           make defconfig
-          make download -j16
+          make download -j16 || make -j$(nproc) || make -j1 || make -j1 V=s
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
 
