@@ -23,7 +23,7 @@ sed -i "12a\[ -d /sys/class/net/eth2 ] && ucidef_set_interface_lan 'eth2'" packa
 # 设置root密码为Tian1234567
 # 命令行生成密码字符串：perl -e 'print crypt("admin",q($1$wEehtjxj)),"\n"'
 # admin为密码明文   q($加密方式$加密盐‘就是一长串字符’) $1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/
-sed -i 's/root:::0:99999:7:::/root:$1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/:0:99999:7:::/g' package/base-files/files/etc/shadow
+sed -i '1s/root:::0:99999:7:::/root:$1$wEehtjxj$7FrtVwl75w.g2zF0c0jKk/:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 echo "remove packages"
 # 替换的包 
