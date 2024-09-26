@@ -45,9 +45,9 @@ rm -rf package/turboacc/nft-fullcone
 rm -rf package/luci-app-adguardhome
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
-#wwan-packages
-rm -rf package/awwan-packages
-git clone https://github.com/immortalwrt/wwan-packages.git package/awwan-packages
+# #wwan-packages
+# rm -rf package/awwan-packages
+# git clone https://github.com/immortalwrt/wwan-packages.git package/awwan-packages
 
 
 
