@@ -6,7 +6,7 @@
 |固件名称|最新编译状态|固件下载|默认登陆地址|登录名/密码|
 |----|----|----|----|----|
 |[![](https://img.shields.io/badge/LEDE-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/lede.yml)|[![](https://github.com/chenlunTian/OpenWrt/actions/workflows/lede.yml/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/lede.yml)|[![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/chenlunTian/OpenWrt/releases/tag/lede_X86_64) |192.168.1.1|root/Tian1234567|
-|[![](https://img.shields.io/badge/OpenWrt-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/immortalwrt.yml)|[![](https://github.com/chenlunTian/OpenWrt/actions/workflows/immortalwrt.yml/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/immortalwrt.yml)|[![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/chenlunTian/OpenWrt/releases/tag/immortalwrt_X86_64) |192.168.1.1|root/Tian1234567|
+|[![](https://img.shields.io/badge/OpenWrt-J1900软路由固件-FFFFFF.svg)](https://github.com/chenlunTian/OpenWrt/blob/main/.github/workflows/immortalwrt.yml)|[![](https://github.com/chenlunTian/OpenWrt/actions/workflows/immortalwrt.yml/badge.svg)](https://github.com/chenlunTian/OpenWrt/actions/workflows/immortalwrt.yml)|[![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/chenlunTian/OpenWrt/releases/tag/immortalwrt_X86_64) |192.168.1.1|root/空|
 
 ### OpenWrt X86_64 已选插件
 
