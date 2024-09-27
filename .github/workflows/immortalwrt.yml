@@ -182,7 +182,7 @@ jobs:
             - 💝 源码分支: ${{ env.REPO_BRANCH }}
             - 🚀 内核版本: ${{ env.KERNEL }}
             - 🌐 默认地址: 192.168.1.1
-            - 🔑 默认密码: Tian1234567
+            - 🔑 默认密码: 
           files: ${{ env.FIRMWARE }}/*
 
       - name: Remove old Releases
